@@ -1,0 +1,84 @@
+Tools / Softwares
+==================
+1. NodeJS
+   https://nodejs.org/en/download
+
+   Run the below command in terminal to verify nodejs is installed
+   node -v
+
+2. vscode ( Code Editor )
+   https://code.visualstudio.com/download
+
+
+3. Git Setup
+   a. install git software ( https://git-scm.com/install/ )
+   b. create github account (https://github.com/signup)
+   c. have git setup in local machine
+      https://github.com/sanjaysamantra1/git_notes/blob/main/git_notes.txt
+
+
+
+Web Development
+===============
+-Developing a website
+
+1. FrontEnd : User Interface ( Look & Feel )
+        HTML : Content ( paragraph, image,form,audio,video)
+        CSS :  Styling ( border, backgorund , width , height, padding, margin )
+        Bootstrap : CSS Library (css classnames)
+        Javascript : Behaviour
+        Angular/React : Javascript framework/Library (RAD,CLI,Form,API,Routing) 
+
+2. BackEnd : Develop APIs ( java , .net, Python, PHP , Nodejs, go )
+
+3. DataBase : Holds the data ( oracle , mysql , mongodb )
+
+
+
+Write a Simple HTML code and Run it in browser
+==============================================
+1. Create an HTML file ( demo_1.html )
+2. Add HTML code 
+3. install 'open in browser' extension in vscode
+4. open HTML file in browser (alt+b / alt+shift+b)
+
+
+
+HTML Emmets / shortcuts
+=======================
+https://docs.emmet.io/cheat-sheet/
+
+!          HTML 5 boilerplate code
+
+ul>li*10{Car-$}
+
+select>option*200{Country-$}
+
+
+CSS ( cascading style sheet)
+====
+1. inline css (style attribute) ( Restricted to 1 element )
+   <h2 style="color: blue">My First HTML Program</h2>
+
+2. internal css ( style tag ) ( Restricted to 1 HTML Page )
+   <style></style>
+
+3. external css ( project level )
+   a. write css code in a separate .css file
+   b. include that css file in HTML file using <link>
+
+
+How to Use bootstrap in HTML Files
+==================================
+-CSS library : pre-defined css classnames
+-Maintained by Twitter
+-Bootstrap 5 is the latest version
+-https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+Add CDN link in HTML Files
+     
+
+
+
+
+   
