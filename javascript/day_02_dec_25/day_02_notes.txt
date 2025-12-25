@@ -1,0 +1,44 @@
+Types of Javascript
+===================
+1. internal Javascript     <script></script>       page level
+2. external javascript     (separate .js file , include that .js file in html file)
+
+
+
+How to write & Execute Javascript code
+======================================
+1. Browser  (FrontEnd Development)
+   a. create a javascript file with some javascript code (addition.js)
+   b. include that javascript file into HTMl file
+      <script src="./addition.js"></script>
+   c. Open HTML file in browser ( alt + b )
+
+2. NodeJS   (BackEnd Development)
+   a. create a javascript file with some javascript code (addition.js)
+   b. run the javascript file with the below command
+      node <filename>.js   ( make sure nodejs is installed)
+
+Note : Every Javascript code that runs on browser might not run in nodejs , vice versa
+
+
+Most Commonly used javascript objects/classes
+=============================================
+console :  log() , warn(), error(), table(), time(), timeEnd()
+window :   alert(), confirm(), prompt() , atob(), btoa()
+document : getElementById() , querySelector(), querySelectorAll()
+Math :     max(), min(), sqrt(), cbrt()
+Array :    push(), pop(), slice(), shift()
+Object :   keys(), values(), entries()
+JSON :     stringify() , parse()
+
+
+window
+======
+alert() : Displays Alert message
+          Message + Ok
+
+confirm() : Shows User Confirmation
+            Message + Ok(true)  , Cancel(false)
+
+prompt() : Collect User input
+           Message + inputBox + Ok , Cancel          
