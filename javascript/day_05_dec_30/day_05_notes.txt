@@ -1,0 +1,52 @@
+
+functions
+=========
+1. Function Declaration
+2. Function Expression
+3. Self invoked
+4. Arrow Function
+
+
+
+Function Declaration vs Function Expression
+============================================
+1. Function Declarations are named , Function Expressions are anonymous
+2. Function Declarations are hoisted, Function Expressions are not hoisted
+
+
+Q. Write a program to calculate simple interest
+
+
+Self Invoked Function
+=====================
+-Immediately Invoked Function Expression ( IIFE )
+-these functions can be invoked only 1
+-To Execute something on page load.
+
+
+Arrow Function
+==============
+-compact syntaxt
+-implicit return
+-no function keyword
+-no body {} 
+-doesn't have its own 'this' , uses 'this' from lexical/outer scope
+-in arrow function, 'this' is static
+
+
+'this' in function
+==================
+Regular : 'this' - how/where the function is called
+Arrow : 'this' - where the function is written
+
+
+
+
+Arrow Function Limitations
+==========================
+1. arrow functions shouldn't be used as object methods
+2. arrow functions shouldn't be used if we expect 'this' value to be dynamic inside a function.
+
+
+Regular Function Limitations
+============================

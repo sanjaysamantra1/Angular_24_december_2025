@@ -1,0 +1,17 @@
+<script>
+  // this = current context/object where the code is being executed
+
+  console.log(this); // this = window
+
+  class Student {
+    f1() {
+      console.log("f1:: ", this); // this = Student
+    }
+    f2 = () => {
+      console.log("f2:: ", this); // this = Student
+    };
+  }
+  let std = new Student();
+  std.f1();
+  std.f2();
+</script>
