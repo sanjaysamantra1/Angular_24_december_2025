@@ -27,3 +27,6 @@ Where Closure is used
 =====================
 1. Data Privacy (Encapsulation)
 2. Function Factory
+
+
+Q1. Write a program to implement increment,decrement,reset functionality using closure
