@@ -1,0 +1,20 @@
+<h2 class="text-center">Let's Learn DataBinding</h2>
+
+<div class="border border-3 rounded-3 p-2 m-2">
+  <div>userName: {{userName}}</div>
+  <div>userName: <span [innerText]="userName"></span></div>
+  <div>userName: <span bind-innerText="userName"></span></div>
+  <hr />
+  <img src="{{img_url}}" alt="" width="300" height="350" />
+  <img [src]="img_url" alt="" width="300" height="350" />
+  <img bind-src="img_url" alt="" width="300" height="350" />
+  <hr />
+  <div>1 way: <input type="text" value="{{userName}}" /></div>
+  <div>1 way: <input type="text" class="my-1" [value]="userName" /></div>
+  <div>1 way: <input type="text" class="my-1" bind-value="userName" /></div>
+  <hr />
+  <button class="btn btn-primary" disabled="{{flag}}">Click Me</button>
+  <button class="btn btn-primary mx-1" [disabled]="flag">Click Me</button>
+  <button class="btn btn-primary mx-1" bind-disabled="flag">Click Me</button>
+  <button class="btn btn-primary mx-1" (click)="toggleFlag()">Toggle</button>
+</div>
