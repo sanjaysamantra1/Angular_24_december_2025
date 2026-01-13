@@ -12,9 +12,17 @@
   <div>1 way: <input type="text" value="{{userName}}" /></div>
   <div>1 way: <input type="text" class="my-1" [value]="userName" /></div>
   <div>1 way: <input type="text" class="my-1" bind-value="userName" /></div>
+  <div>2 way: <input type="text" class="my-1" [(ngModel)]="userName" /></div>
   <hr />
   <button class="btn btn-primary" disabled="{{flag}}">Click Me</button>
   <button class="btn btn-primary mx-1" [disabled]="flag">Click Me</button>
   <button class="btn btn-primary mx-1" bind-disabled="flag">Click Me</button>
   <button class="btn btn-primary mx-1" (click)="toggleFlag()">Toggle</button>
+  <button class="btn btn-primary mx-1" on-click="toggleFlag()">Toggle</button>
+  <hr />
+  <input type="text" id="box1" value="{{userName}}" />
+  <div>Attribute binding:</div>
+  <textarea name="" id="" [maxLength]="max_length"></textarea>
+  <textarea name="" id="" [attr.maxlength]="max_length"></textarea>
+  <textarea name="" id="" maxlength="20"></textarea>
 </div>
