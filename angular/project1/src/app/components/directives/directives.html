@@ -1,0 +1,11 @@
+<h2 class="text-center">Let's Learn Directives</h2>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>if-else</div>
+  <input type="number" [(ngModel)]="num" />
+  @if(num%2 == 0){
+    <div>{{num}} is Even</div>
+  }@else {
+    <div>{{num}} is Odd</div>
+  }
+</div>

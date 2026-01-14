@@ -1,4 +1,10 @@
-<h2 class="text-center">Let's Learn DataBinding</h2>
+<style>
+  h3{
+    color: purple;
+  }
+</style>
+
+<h2 class="text-center" style="color:brown">Let's Learn DataBinding</h2>
 
 <div class="border border-3 rounded-3 p-2 m-2">
   <div>userName: {{userName}}</div>
@@ -28,13 +34,13 @@
 </div>
 
 <div class="border border-3 rounded-3 p-2 m-2">
-  <div>template Variables</div>
+  <h3>template Variables</h3>
   @let name = user.name;
   <div>Name: {{name}}</div>
 </div>
 
 <div class="border border-3 rounded-3 p-2 m-2">
-  <div>Addition of 2 numbers using 2-way binding:</div>
+  <h3>Addition of 2 numbers using 2-way binding:</h3>
   <input type="number" [(ngModel)]="num1" />
   <input type="number" [(ngModel)]="num2" />
   <div>Addition of {{num1}} and {{num2}} is {{num1+num2}}</div>

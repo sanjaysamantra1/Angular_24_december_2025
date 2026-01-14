@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
   ],
   templateUrl: './databinding.html',
   styleUrl: './databinding.css',
+  // styles: ['h1 { color:red; }']
+  // encapsulation: ViewEncapsulation.Emulated
 })
 export class Databinding {
   userName: string = 'Virat Kohli';
