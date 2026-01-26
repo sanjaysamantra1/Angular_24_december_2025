@@ -1,8 +1,13 @@
 <h3 class="text-center">Product List</h3>
 
+<div>
+  <button class="btn btn-primary" (click)="openAlert()">Open Alert</button>
+  <button class="btn btn-primary mx-2" (click)="openSnackBar()">Open snackBAr</button>
+</div>
+
 <div class="container">
   <div class="row">
-    @for (product of productArr; track $index) {
+    @for (product of productArr | paginate: { itemsPerPage: 4, currentPage: p}; track $index) {
       <div class="col-sm-3">
         <div class="card">
           <img src="{{product.image}}" class="card-img-top" alt="..." height="200">
@@ -12,11 +17,21 @@
             <p class="card-text text-truncate">{{product.title}}</p>
             <p class="card-text text-truncate">{{product.description}}</p>
             <p class="card-text">{{product.price}}</p>
-            <p class="card-text">{{product.rating.rate}}</p>
+            <p class="card-text">
+              {{product.rating.rate}}
+              @for(ele of starArr;track $index){
+                <fa-icon [icon]="getStarType(product.rating.rate,$index+1)" style="color:gold"></fa-icon>
+              }
+            </p>
             <button class="btn btn-primary">Details</button>
           </div>
         </div>
       </div>
     }
+  </div>
+  <div class="row mt-2">
+    <div class="col-sm-4 offset-4">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
   </div>
 </div>
