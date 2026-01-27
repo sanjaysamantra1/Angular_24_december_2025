@@ -8,12 +8,20 @@ import { CommonModule } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import Swal from 'sweetalert2';
 import Snackbar from 'awesome-snackbar';
+import { CharOnly } from '../../custom-directives/char-only';
+import { Highlight } from '../../custom-directives/highlight';
+import { Zoomin } from '../../custom-directives/zoomin';
+import { Alphanumeric } from '../../custom-directives/alphanumeric';
 @Component({
   selector: 'app-product-list',
   imports: [
     CommonModule,
     FontAwesomeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    // CharOnly,
+    Highlight,
+    Zoomin,
+    Alphanumeric
   ],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',

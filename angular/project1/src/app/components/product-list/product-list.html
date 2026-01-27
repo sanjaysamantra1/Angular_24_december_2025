@@ -1,17 +1,23 @@
-<h3 class="text-center">Product List</h3>
+<h3 class="text-center" appHighlight>Product List</h3>
 
-<div>
+<!-- <div>
   <button class="btn btn-primary" (click)="openAlert()">Open Alert</button>
   <button class="btn btn-primary mx-2" (click)="openSnackBar()">Open snackBAr</button>
-</div>
+</div> -->
 
 <div class="container">
   <div class="row">
+    <div class="col-sm-4 offset-4">
+      <!-- <input class="form-control" type="search" placeholder="Search..." appCharOnly /> -->
+      <input class="form-control" type="search" placeholder="Search..." appAlphanumeric />
+    </div>
+  </div>
+  <div class="row mt-2">
     @for (product of productArr | paginate: { itemsPerPage: 4, currentPage: p}; track $index) {
       <div class="col-sm-3">
         <div class="card">
           <img src="{{product.image}}" class="card-img-top" alt="..." height="200">
-          <div class="card-body text-center">
+          <div style='background-color: lightcyan;' class="card-body text-center" appZoomin>
             <h5 class="card-title">{{product.category}}</h5>
             <p class="card-text">{{product.id}}</p>
             <p class="card-text text-truncate">{{product.title}}</p>
