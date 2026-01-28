@@ -1,0 +1,92 @@
+<h3 class="text-center">Let's Learn Pipes</h3>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <h5>uppercase , lowercase, titlecase pipe</h5>
+  <div>
+    userName: {{userName}}
+    <div><input [(ngModel)]="userName"></div>
+  </div>
+  <div>userName with uppercase: {{userName | uppercase}}</div>
+  <div>userName with lowercase: {{userName | lowercase}}</div>
+  <div>userName with titlecase: {{userName | titlecase}}</div>
+</div>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <h5>Durrency pipe</h5>
+  <div>Salary: {{mySal}}</div>
+  <div>Salary: {{mySal | currency}}</div>
+  <div>Salary: {{mySal | currency : 'INR'}}</div>
+  <!-- input | pipeName : arguement-1  -->
+  <div>Salary: {{mySal | currency : '&euro;'}}</div>
+  <div>Salary: {{mySal | currency : '&euro;'}}</div>
+  <div>Salary: {{mySal | currency : '&#x5143;'}}</div>
+  <div>Salary: {{mySal | currency : 'USD':'code'}}</div>
+  <div>Salary: {{mySal | currency : 'USD':'symbol'}}</div>
+</div>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <h5>Date pipe</h5>
+  <div>{{ dateObj }}</div>
+  <div>{{ dateObj | date }}</div>
+  <div>{{ dateObj | date :'short' | uppercase}}</div> <!-- Short Date + Short Time -->
+  <div>{{ dateObj | date :'medium' | lowercase}}</div> <!-- medium Date + medium Time -->
+  <div>{{ dateObj | date :'long'}}</div> <!-- long Date + long Time -->
+  <div>{{ dateObj | date :'full'}}</div> <!-- full Date + full Time -->
+  ==================
+  <div>{{ dateObj | date : 'shortDate' }}</div>
+  <div>{{ dateObj | date : 'mediumDate' }}</div>
+  <div>{{ dateObj | date : 'longDate' }}</div>
+  <div>{{ dateObj | date : 'fullDate' }}</div>
+  =================
+  <div>{{ dateObj | date : 'shortTime' }}</div>
+  <div>{{ dateObj | date : 'mediumTime' }}</div>
+  <div>{{ dateObj | date : 'longTime' }}</div>
+  <div>{{ dateObj | date : 'fullTime' }}</div>
+  ==============
+  <div>{{ dateObj | date : 'dd-MMMM-yyyy' }}</div>
+  <div>{{ dateObj | date : 'HH:mm:ss a' }}</div>
+  <div>{{ dateObj | date: "fullTime":"UTC" }}</div>
+</div>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <h5>number & percent pipe</h5>
+  <div>{{ 12.111222333 | number: "3.2-5" }}</div>
+  <div>{{ 12.1 | number: "3.2-5" }}</div>
+  <div>{{0.5 | number:'3.2-5'}}</div>
+  <div>{{0.5 | percent}}</div>
+  <div>{{0.05 | percent}}</div>
+  <div>{{0.75 | percent}}</div>
+</div>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <h5>json pipe</h5>
+  <div>{{ user }}</div>
+  <div>{{ user | json }}</div>
+</div>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <h5>key-value pipe</h5>
+  @for (entry of user | keyvalue; track $index) {
+  <div>{{entry.key}} ==== {{entry.value}}</div>
+  }
+</div>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <h5>slice pipe</h5>
+  <div>{{cars | slice : 2 : 4}}</div>
+  <div>{{'Angular is a Framework' | slice : 0 : 7}}</div>
+  <div>{{'Angular is a Framework' | slice : 0 : -4}}</div>
+</div>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <h5>async pipe</h5>
+  <div>{{num}}</div>
+  <div>{{num | async}}</div>
+</div>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <h5>Custom Pipe: (Ordinal)</h5>
+  <input type="number" [(ngModel)]="cardinal" />
+  <div>{{cardinal}}</div>
+  <div>{{cardinal | ordinal}}</div>
+</div>
