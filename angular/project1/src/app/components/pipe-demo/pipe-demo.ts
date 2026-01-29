@@ -3,13 +3,15 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { interval } from 'rxjs';
 import { OrdinalPipe } from '../../custom-pipes/ordinal-pipe';
+import { MySortPipe } from '../../custom-pipes/my-sort-pipe';
 
 @Component({
   selector: 'app-pipe-demo',
   imports: [
     CommonModule,
     FormsModule,
-    OrdinalPipe
+    OrdinalPipe,
+    MySortPipe
   ],
   templateUrl: './pipe-demo.html',
   styleUrl: './pipe-demo.css',
@@ -23,4 +25,5 @@ export class PipeDemo {
   num = interval(1000);
 
   cardinal: number = 21;
+  numArr = [20, 50, 10, 40, 30];
 }

@@ -90,3 +90,14 @@
   <div>{{cardinal}}</div>
   <div>{{cardinal | ordinal}}</div>
 </div>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <h5>Need of Impure Pipe:</h5>
+  <div>
+    <input type="number" #newNum>
+    <button (click)="numArr.push(+newNum.value)" class="mx-1">Add</button>
+  </div>
+  @for (num of numArr | mySort; track $index) {
+    <span>{{num}} &nbsp;</span>
+  }
+</div>

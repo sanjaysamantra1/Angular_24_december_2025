@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'ordinal',
-  pure: false
+  pure: true
 })
 export class OrdinalPipe implements PipeTransform {
   transform(input: number): string {
