@@ -12,5 +12,10 @@ import { Child2Demo } from '../child2-demo/child2-demo';
   styleUrl: './parent-demo.css',
 })
 export class ParentDemo {
+  a = 10;
+  addressParent: string = '';
 
+  receiveDataFromChild(addressFromChild: any) {
+    this.addressParent = addressFromChild;
+  }
 }
