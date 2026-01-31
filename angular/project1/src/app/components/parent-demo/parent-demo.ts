@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Child1Demo } from '../child1-demo/child1-demo';
 import { Child2Demo } from '../child2-demo/child2-demo';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +16,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './parent-demo.css',
 })
 export class ParentDemo {
+  @ViewChild('mybox1') myInputBox1: any;
+
+
   user = { name: 'sanjay', role: 'trainer', address: 'bangalore' };
 
   a: number;
@@ -26,6 +29,7 @@ export class ParentDemo {
   constructor() {
     this.a = 100;
     console.log("Parent constructor")
+    console.log(this.myInputBox1)
   }
   ngOnChanges() {
     console.log('Parent ngOnChanges');
@@ -42,9 +46,11 @@ export class ParentDemo {
   // ngAfterContentChecked() {
   //   console.log('Parent ngAfterContentChecked')
   // }
-  // ngAfterViewInit() {
-  //   console.log('Parent ngAfterViewInit');
-  // }
+  ngAfterViewInit() {
+    console.log('Parent ngAfterViewInit');
+    console.log(this.myInputBox1)
+    this.myInputBox1.nativeElement.focus();
+  }
   // ngAfterViewChecked() {
   //   console.log('Parent ngAfterViewChecked');
   // }
