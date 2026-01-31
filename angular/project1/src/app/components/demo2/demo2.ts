@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LoggingService } from '../../services/logging-service';
 
 @Component({
   selector: 'app-demo2',
@@ -7,8 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './demo2.css',
 })
 export class Demo2 {
+  loggingService = inject(LoggingService)
   ngOnInit() {
-    console.log('Demo-2 ngOnInit')
+    console.log('Demo-2 ngOnInit');
+    this.loggingService.log('ERROR','Something went wrong')
   }
   ngOnDestroy() {
     console.log('Demo-2 ngOnDestroy')
