@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Comment } from '../models/comment';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +9,7 @@ import { inject, Injectable } from '@angular/core';
 export class CommentService {
   httpClient = inject(HttpClient);
 
-  getAllComments() {
-    return this.httpClient.get('https://jsonplaceholder.typicode.com/comments')
+  getAllComments(): Observable<Comment[]> {
+    return this.httpClient.get<Comment[]>('https://jsonplaceholder.typicode.com/comments')
   }
 }

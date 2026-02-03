@@ -1,5 +1,6 @@
+import { Comment } from '../../models/comment';
 import { CommentService } from './../../services/comment-service';
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-comment-list',
@@ -9,10 +10,10 @@ import { Component, inject, signal } from '@angular/core';
 })
 export class CommentList {
   commentService = inject(CommentService);
-  commentArr: any = signal([]);
+  commentArr: WritableSignal<Comment[]> = signal([]);
 
   ngOnInit() {
-    this.commentService.getAllComments().subscribe((response: any) => {
+    this.commentService.getAllComments().subscribe((response: Comment[]) => {
       this.commentArr.set(response);
     });
   }
