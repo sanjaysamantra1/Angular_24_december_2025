@@ -25,7 +25,7 @@ import { EmployeeList } from '../employee-list/employee-list';
     // Demo1,
     // Demo2
     // HttpDemo1
-    // CommentList
+    CommentList,
     EmployeeList
   ],
   templateUrl: './body.html',
