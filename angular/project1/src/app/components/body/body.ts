@@ -11,6 +11,11 @@ import { Demo2 } from '../demo2/demo2';
 import { HttpDemo1 } from '../http-demo1/http-demo1';
 import { CommentList } from '../comment-list/comment-list';
 import { EmployeeList } from '../employee-list/employee-list';
+import { ObservableDemo1 } from '../../componnets/observable-demo1/observable-demo1';
+import { ObservableDemo2 } from '../../componnets/observable-demo2/observable-demo2';
+import { SubjectDemo1 } from '../subject-demo1/subject-demo1';
+import { AlbumList } from '../album-list/album-list';
+import { SignalDemo1 } from '../signal-demo1/signal-demo1';
 
 @Component({
   selector: 'app-body',
@@ -25,8 +30,13 @@ import { EmployeeList } from '../employee-list/employee-list';
     // Demo1,
     // Demo2
     // HttpDemo1
-    CommentList,
-    EmployeeList
+    // CommentList,
+    // AlbumList,
+    // EmployeeList
+    // ObservableDemo1
+    // ObservableDemo2
+    // SubjectDemo1
+    SignalDemo1
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',

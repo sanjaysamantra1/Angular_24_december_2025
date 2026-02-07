@@ -1,0 +1,13 @@
+<h3 class="text-center">ALbum List</h3>
+
+<table class="table table-bordered table-striped">
+  <tbody>
+    @for (album of albumArr(); track $index) {
+    <tr>
+      <td>{{album.id}}</td>
+      <td>{{album.userId}}</td>
+      <td>{{album.title}}</td>
+    </tr>
+    }
+  </tbody>
+</table>

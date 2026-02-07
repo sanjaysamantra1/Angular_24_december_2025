@@ -7,6 +7,8 @@ import { Employee } from '../models/employee';
   providedIn: 'root',
 })
 export class EmployeeService {
+  
+
   httpClient = inject(HttpClient);
 
   /*  getAllEmployees() { // reads data from backend , returns as it is
