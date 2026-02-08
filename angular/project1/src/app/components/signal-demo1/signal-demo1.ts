@@ -1,4 +1,5 @@
-import { Component, computed, signal, Signal, WritableSignal } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, computed, effect, inject, signal, Signal, WritableSignal } from '@angular/core';
 import { count } from 'rxjs';
 
 @Component({
@@ -29,5 +30,24 @@ export class SignalDemo1 {
   updateCookieCount(event: Event) {
     const input = event.target as HTMLInputElement;
     this.cookieCount.set(parseInt(input.value));
+  }
+  // ================
+  httpClient = inject(HttpClient);
+  userId = signal(1);
+  userData: WritableSignal<any> = signal({})
+  userDetailsEffect = effect(() => {
+    const id = this.userId();
+    this.fetchUserDetails(id);
+  });
+  fetchUserDetails(id: number) {
+    this.httpClient.get(`https://jsonplaceholder.typicode.com/users/${id}`).subscribe(response => {
+      this.userData.set(response)
+    })
+  }
+  destroyEffect() {
+    this.userDetailsEffect.destroy()
+  }
+  incrementUserId() {
+    this.userId.update(val => val + 1);
   }
 }
