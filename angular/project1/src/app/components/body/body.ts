@@ -19,6 +19,7 @@ import { SignalDemo1 } from '../signal-demo1/signal-demo1';
 import { FormDemo1 } from '../form-demo1/form-demo1';
 import { ModelDrivenForm } from '../model-driven-form/model-driven-form';
 import { DynamicForm } from '../dynamic-form/dynamic-form';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-body',
@@ -42,7 +43,8 @@ import { DynamicForm } from '../dynamic-form/dynamic-form';
     // SignalDemo1
     // FormDemo1
     // ModelDrivenForm
-    DynamicForm
+    // DynamicForm
+    RouterOutlet
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
