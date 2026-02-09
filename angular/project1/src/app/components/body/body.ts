@@ -18,6 +18,7 @@ import { AlbumList } from '../album-list/album-list';
 import { SignalDemo1 } from '../signal-demo1/signal-demo1';
 import { FormDemo1 } from '../form-demo1/form-demo1';
 import { ModelDrivenForm } from '../model-driven-form/model-driven-form';
+import { DynamicForm } from '../dynamic-form/dynamic-form';
 
 @Component({
   selector: 'app-body',
@@ -40,7 +41,8 @@ import { ModelDrivenForm } from '../model-driven-form/model-driven-form';
     // SubjectDemo1
     // SignalDemo1
     // FormDemo1
-    ModelDrivenForm
+    // ModelDrivenForm
+    DynamicForm
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
