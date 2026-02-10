@@ -24,7 +24,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-body',
   imports: [
-    // Databinding
+    // Databinding,
     // Directives
     // MyModal
     // UserList
